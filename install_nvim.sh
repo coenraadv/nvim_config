@@ -23,7 +23,7 @@ sudo tar -C /opt -xzf nvim-linux64.tar.gz || error_exit "Failed to extract Neovi
 echo "Adding Neovim to PATH..."
 if ! grep -q '/opt/nvim-linux64/bin' ~/.bashrc; then
     echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc || error_exit "Failed to add Neovim to PATH in .bashrc"
-    echo 'alias vi="/opt/nvim-linux64/bin"' >> ~/.bashrc || error_exit "Failed to add vi alias in .bashrc"
+    echo 'alias vi="nvim"' >> ~/.bashrc || error_exit "Failed to add vi alias in .bashrc"
     echo "Reloading bashrc..."
     source ~/.bashrc || error_exit "Failed to reload bashrc"
 fi
