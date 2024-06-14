@@ -18,9 +18,6 @@ sudo rm -rf /opt/nvim || error_exit "Failed to remove existing Neovim installati
 echo "Extracting Neovim..."
 sudo tar -C /opt -xzf nvim-linux64.tar.gz || error_exit "Failed to extract Neovim."
 
-echo "Cloning NvChad repository..."
-git clone $NVCHAD_REPO  ~/.config/nvim || error_exit "Failed to clone NvChad repository"
-
 echo "Adding Config to NvChad"
 curl -o ~/.config/nvim $CONFIG_REPO || error_exit "Failed to add config to NvChad"
 
