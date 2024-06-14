@@ -2,7 +2,7 @@
 
 NEOVIM_REPO='https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz'
 NVCHAD_REPO='https://github.com/NvChad/starter'
-CONFIG_REPO='https://raw.githubusercontent.com/coenraadv/nvim_config/main/nvim'
+CONFIG_REPO='https://raw.githubusercontent.com/coenraadv/nvim_config/main/nvim.zip'
 
 function error_exit {
     echo "$1" 1>&2
