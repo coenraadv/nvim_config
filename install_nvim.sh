@@ -33,14 +33,7 @@ if [ -d "~/.config/nvim" ]; then
     sudo rm -rf ~/.config/nvim || error_exit "Failed to remove existing Nvim configuration."
 fi
 
-echo "Installing NvChad"
-git clone $NVCHAD_REPO ~/.config/nvim && nvim
-
-echo "Adding custom config to NvChad..."
-if [ -d "~/.config/nvim" ]; then
-    echo "Removing existing NvChad configuration..."
-    sudo rm -rf ~/.config/nvim || error_exit "Failed to remove existing NvChad configuration."
-fi
+echo "Adding custom config"
 
 curl -o ~/.config/nvim.zip $CONFIG_REPO || error_exit "Failed to add custom config to NvChad"
 cd ~/.config || error_exit "Failed to change directory to ~/.config"
