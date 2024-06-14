@@ -42,7 +42,7 @@ if [ -d "~/.config/nvim" ]; then
     sudo rm -rf ~/.config/nvim || error_exit "Failed to remove existing NvChad configuration."
 fi
 
-curl -LO ~/.config/nvim.zip $CONFIG_REPO || error_exit "Failed to add custom config to NvChad"
+curl -o ~/.config/nvim.zip $CONFIG_REPO || error_exit "Failed to add custom config to NvChad"
 cd ~/.config || error_exit "Failed to change directory to ~/.config"
 unzip nvim.zip || error_exit "Failed to extract custom config"
 rm nvim.zip || "Failed to remove residual file nvim.zip"
