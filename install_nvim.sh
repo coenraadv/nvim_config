@@ -40,4 +40,5 @@ cd ~/.config || error_exit "Failed to change directory to ~/.config"
 unzip nvim.zip || error_exit "Failed to extract custom config"
 rm nvim.zip || "Failed to remove residual file nvim.zip"
 
-echo "Neovim installation and configuration complete."
+echo "Neovim installation."
+echo "To finalize the install run source ~/.bashrc then vi or nvim to install the plugins"
