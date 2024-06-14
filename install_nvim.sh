@@ -33,11 +33,10 @@ if [ -d "~/.config/nvim" ]; then
     sudo rm -rf ~/.config/nvim || error_exit "Failed to remove existing NvChad configuration."
 fi
 
-echo "Cloning NvChad repository..."
-git clone $NVCHAD_REPO ~/.config/nvim && nvim || error_exit "Failed to clone NvChad repository"
-
 echo "Adding custom config to NvChad..."
 sudo rm -r ~/.config/nvim
-curl -o ~/.config/nvim $CONFIG_REPO || error_exit "Failed to add custom config to NvChad"
+curl -o ~/.config/nvim.zip $CONFIG_REPO || error_exit "Failed to add custom config to NvChad"
+cd ~/.config && unzip nvim.zip || error_exit "Failed to extract custom config"
+rm nvim.zip || "Failed to remove residual file nvim.zip"
 
 echo "Neovim installation and configuration complete."
